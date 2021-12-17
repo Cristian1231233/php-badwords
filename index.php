@@ -8,7 +8,11 @@ con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
 
 
 
-$p = 'La parola visualizzata è : ciao';
+$p = 'La parola visualizzata è : ciao, ed è lunga';
+
+$lunghezzaP = strlen($p);
+
+$pELunghezza = $p .' '. $lunghezzaP;
 
 $parola = $_GET['parola'];
 
@@ -30,8 +34,8 @@ $pConParolaUtente = $parola;
 <body>
 
     
-    <p><?php echo $p ?> ed è lunga <?php echo strlen($p); ?></p>
-    <p> <?php echo $p ?> ed è lunga <?php echo strlen($p); ?> <?php echo str_replace($parola, '***', $pConParolaUtente); ?></p>
+    <p><?php echo $pELunghezza; ?></p>
+    <p> <?php echo $pELunghezza; ?> <?php echo str_replace($parola, '***', $pConParolaUtente); ?></p>
 
 </body>
 </html>
